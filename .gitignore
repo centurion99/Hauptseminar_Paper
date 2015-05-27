@@ -42,9 +42,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-    *.aux
-    *.pdf
-    *.ps
-    *.log
-    *.dvi
-    *.tex~
+*.aux
+*.ps
+*.log
+*.dvi
+*.tex~
