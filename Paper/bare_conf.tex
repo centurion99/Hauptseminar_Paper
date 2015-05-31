@@ -356,8 +356,10 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Software Defined Networking for RSU Clouds in support of The Internet of Vehicles}
-%Software Defined Networking basierte Cloud zur Unterstützung des intelligenten Fahrzeugnetzwerks  
+\title{Neuartige Software Defined Networking basierte Cloud zur Unterstützung des intelligenten Fahrzeugnetzwerks}
+%
+
+%Software Defined Networking for RSU Clouds in support of The Internet of Vehicles
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -374,7 +376,7 @@ Email: christoph.wittmann@tum.de}
 %Telephone: (800) 555--1212\\
 %Fax: (888) 555--1212}
 
-\thanks{*This paper is a reinterpretation of the paper \emph{M.A. Salahuddin. ``Software Defined Networking for RSU Clouds in support of The Internet of Vehicles,'' Internet of Things Journal, IEEE, 2014, pp. 133-144}. It was presented on June 22, 2015 (Paper submission deadline) as a part of MSCE Seminar (MSCE course TUM), under the supervision of M. Sc. 
+\thanks{*This paper is a reinterpretation of the paper \emph{Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani. ``Software Defined Networking for RSU Clouds in support of The Internet of Vehicles,'' Internet of Things Journal, IEEE, 2014, pp. 133-144}. It was presented on June 22, 2015 (Paper submission deadline) as a part of MSCE Seminar (MSCE course TUM), under the supervision of M. Sc. 
 Christian Sieber (c.sieber@tum.de).}
 }
 
@@ -415,7 +417,9 @@ Christian Sieber (c.sieber@tum.de).}
 
 \begin{abstract}
 %\boldmath
-In diesem Paper wird eine neuartige Cloud Architektur vorgestellt, die 
+Die Nachfrage nach Sicherheits- und Unterhaltungsdiensten im Straßenverkehr wächst unaufhörlich. Um diesen riesigen dynamischen Bedarf an Ressourcen zu bedienen, bedarf es einer intelligenten Lösung für das Fahrzeugnetzwerk.
+Einen großen Schritt zur Lösung dieser Problemstellung stellt die in diesem Paper vorgestellte neuartige Cloud Architektur dar. In dieser Architektur werden klassische Roadside Units (RSUs) und spezielle Software Defined Networking (SDN)-fähige RSUs zu einer RSU-Cloud zusammengefasst. Dank SDN lassen sich die gehosteten Dienste innerhalb der Cloud dynamisch verschieben, kopieren oder neu erzeugen, um sie der lokalen Nachfrage anzupassen. Das damit verbundene Problem des Ressourcen Managements in der Cloud wird als Mehrkriterielles Ganzzahliges Lineares Optimierungsproblem modelliert. Des Weitern wird ein heuristischer Ansatz präsentiert, um die Kosten einer Umkonfigurierung des Netzes zu minimieren. Die Heuristik wird zusätzlich durch den Einsatz von Bestärkendem Lernen hinsichtlich langfristiger Minimierung der Kosten verbessert.
+Die Ergebnisse zeigen, dass die Heuristik verglichen mit einem naiven Ansatz bezüglich der Minimierung von Kosten und der Verzögerung im Netzwerk deutlich besser abschneidet. Auch die Verbesserung durch bestärkendes Lernen macht sich längerfristig durch geringere Kosten bemerkbar.
 
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
@@ -445,33 +449,35 @@ In diesem Paper wird eine neuartige Cloud Architektur vorgestellt, die
 \section{Einleitung}
 % no \IEEEPARstart
 
-Intelligente Transport Systeme sind die Zukunft unserer Schienen, Straßen sowie Luft-und Wasserwege und ein großes aktuelles Forschungsgebiet. Durch die damit einhergehende Zusammenführung von Transport und Kommunikation wird sich ein großes Plus in Sachen Sicherheit, Effizienz und Ökologie versprochen. Dies soll unter anderem durch intelligente Ausbalancierung des Verkehrs zur Stauvermeidung oder durch die Warnung vor potentiellen Gefahrenstellen in Echtzeit erreicht werden. Gerade im Straßenverkehr werden jedoch von den Verkehrsteilnehmern auch immer mehr Dienste zur Unterhaltung, wie zum Beispiel Video Streaming, mobiles Internet und Internettelefonie nachgefragt. Diese Nachfrage an bandbreitenhungrigen Anwendungen stellen große Anforderungen an ein Kommunikationsnetz. Hinzu kommt, dass sich der Bedarf an Ressourcen durch die naturgemäß hohe Mobilität der Verkehrskehrsteilnehmer dynamisch ändert. Die Ressourcen müssen in der Regel bei einem Dienstleister angemietet werden und verursachen Kosten für einen Dienstanbieter. Um diese Kosten zu minimieren erfordert dies in der Praxis eine ständige bedarfsgerechte Umverteilung der Ressourcen  und eine damit verbundene Neukonfiguration des Kommunikationsnetzes. Einen Lösungsansatz für diese Problemstellung hat Salahuddin et al. in einem Paper mit dem Titel: "Software Defined Networking for RSU Clouds in support of The Internet of Vehicles" vorgestellt. Dort wird eine neuartige Cloud Architektur beschrieben, die durch das Ausnutzen der Vorteile von SDN in hohem Maße flexibel konfigurierbar ist. Konkret bedeutet das, dass innerhalb der Cloud einzelne Dienste verschoben oder an einen anderen Ort kopiert werden, um der wechselnden Nachfrage gerecht zu werden.\\
-Mein eigener Beitrag ist die Zusammenfassung der in diesem Paper vorgestellten Cloud sowie die Ergänzung durch relevante Hintergrundinformationen wie SDN oder die Darstellung anderer Ansätze.\\
-Dieses Paper gliedert sich wie folgt. Im Abschnitt II wird eine kurze Einführung in SDN und dessen Eigenschaften gegeben. In Abschnitt III finden sich eine Darstellung des Aufbaus einer RSU Cloud und deren Komponenten sowie die Anforderungen, die an eine RSU Cloud gestellt werden. Andere Ansätze und deren Vor- und Nachteile werden in Abschnitt IV erläutert. In Abschnitt V werden das Modell zum Ressourcen Management in der Cloud vorgestellt.  In Abschnitt VI werden die Ergebnisse der Simulationen präsentiert und mit anderen Ansätzen verglichen. Abschließend werde ich in Abschnitt VII die Ergebnisse zusammenfassen und einen Ausblick auf weiterführende Arbeit geben.
+Intelligente Transportsysteme bezeichnen ein Kommunikations-Framework für die Unterstützung des Reiseerlebnisses unabhängig von den Transportmitteln. Sie sind die Zukunft unserer Schienen, Straßen sowie Luft-und Wasserwege und ein großes aktuelles Forschungsgebiet. Durch die damit einhergehende Zusammenführung von Transport und Kommunikation wird sich ein großes Plus in Sachen Sicherheit, Effizienz und Ökologie versprochen. Dies soll unter anderem durch intelligente Ausbalancierung des Verkehrs zur Stauvermeidung oder durch die Warnung vor potentiellen Gefahrenstellen in Echtzeit erreicht werden. Gerade im Straßenverkehr werden jedoch von den Verkehrsteilnehmern auch immer mehr Dienste zur Unterhaltung, wie zum Beispiel Video Streaming, mobiles Internet und Internettelefonie nachgefragt. Diese Nachfrage an bandbreitenintensiven Anwendungen stellen große Anforderungen an ein Kommunikationsnetz. Hinzu kommt, dass sich der Bedarf an Ressourcen durch die naturgemäß hohe Mobilität der Verkehrsteilnehmer dynamisch ändert. Die Ressourcen müssen in der Regel bei einem Cloud Anbieter angemietet werden und verursachen Kosten für einen Dienstanbieter. Um diese Kosten zu minimieren, erfordert dies in der Praxis eine ständige bedarfsgerechte Umverteilung der Ressourcen und eine damit verbundene Neukonfiguration des Kommunikationsnetzes. Einen Lösungsansatz für diese Problemstellung hat Salahuddin et al. in einem Paper \cite{IEEEhowto:orig} mit dem 
+Titel: \glqq Software Defined Networking for RSU Clouds in support of The Internet of Vehicles\grqq{} vorgestellt.
+Dort wird eine neuartige Cloud Architektur beschrieben, die durch das Ausnutzen der Vorteile von SDN in hohem Maße flexibel konfigurierbar ist. Konkret bedeutet das, dass innerhalb der Cloud einzelne Dienste verschoben oder an einen anderen Ort kopiert werden, um der wechselnden lokalen Nachfrage gerecht zu werden. Solche Änderungen in der Cloud verursachen jedoch Kosten und können sich negativ auf die Netzwerk Performanz auswirken. Dies erfordert daher ein intelligentes Ressourcen Management, um diese notwendigen Änderungen zu minimieren. Dazu wird die Problemstellung als Mehrkriterielles Ganzzahliges Lineares Optimierungsproblem modelliert sowie eine Heuristik zur Problemlösung entwickelt.\\
+Mein eigener Beitrag ist die Zusammenfassung der in \cite{IEEEhowto:orig} vorgestellten Cloud Architektur sowie des neuartigen Ressourcen Managements. Außerdem werde ich dieses Themengebiet durch relevante Hintergrundinformationen bezüglich Software Defined Networking (SDN) und durch die Darstellung anderer Cloud Architekturen ergänzen.\\
+Dieses Paper gliedert sich wie folgt. Im Abschnitt II wird eine kurze Einführung in SDN und dessen Eigenschaften gegeben. In Abschnitt III finden sich eine Darstellung des Aufbaus einer RSU Cloud und deren Komponenten sowie die Anforderungen, die an eine RSU Cloud gestellt werden. Andere Cloud Architekturen und deren Vor- und Nachteile werden in Abschnitt IV erläutert. In Abschnitt V werden das Modell zum Ressourcen Management in der Cloud vorgestellt. In Abschnitt VI werden die Ergebnisse der Simulationen präsentiert und mit anderen Ansätzen verglichen. Abschließend werde ich in Abschnitt VII die Ergebnisse zusammenfassen.
 
 
 
-\section{Einführung in Software Defined Networking (SDN)}
+\section{Einführung in Software Defined Networking}
 
-In diesem Kapitel wird ein Überblick über das Themengebiet Software Defined Networking gegeben und die elementaren Eigenschaften des Konzepts dargelegt. Um eine Technologie als SDN zu bezeichnen müssen laut [1] vier Prinzipien erfüllt sein, die ich im Folgenden kurz zusammenfassen möchte. Der zentrale Grundsatz in SDN ist die Trennung des Netzwerks in eine physikalische Datenebene und eine davon abstrahierte Kontrollebene. Das bedeutet, dass in einer SDN-fähigen Netzwerkkomponente eine von der Datenebene abgekoppelte, externe Instanz existieren muss. Diese Instanz wird Controller genannt und zeichnet sich dadurch aus, dass sie die Möglichkeit hat, das Weiterleitungsverhalten einer Netzwerkkomponente direkt zu bestimmen. In der Praxis besteht ein SDN daher aus Controllern und Switches. In einem Switch sind nur noch die, von ihm auszuführenden Weiterleitungsvorschriften gespeichert, die dynamisch von einem Controller über die Kontrollebene aktualisiert werden können.  Daraus ergibt sich zum Beispiel der Vorteil, dass Daten- und Kontrollebene im Design beziehungsweise in Untersuchungen und Analysen getrennt voneinander betrachtet werden können. \\
+In diesem Kapitel wird ein Überblick über das Themengebiet SDN gegeben und die elementaren Eigenschaften des Konzepts dargelegt. Damit eine Technologie als SDN-fähig bezeichnet werden darf, müssen laut \cite{IEEEhowto:sdn} vier Prinzipien erfüllt sein, die ich im Folgenden kurz zusammenfassen möchte. Der zentrale Grundsatz in SDN ist die Trennung des Netzwerks in eine physikalische Datenebene und eine davon abstrahierte Kontrollebene. Das bedeutet, dass in einer SDN-fähigen Netzwerkkomponente eine von der Datenebene abgekoppelte, externe Instanz existieren muss. Diese Instanz wird Controller genannt und zeichnet sich dadurch aus, dass sie die Möglichkeit hat, das Weiterleitungsverhalten einer Netzwerkkomponente direkt zu bestimmen. In der Praxis besteht ein SDN daher aus Controllern und Switchen. In einem Switch sind nur noch die, von ihm auszuführenden Weiterleitungsvorschriften gespeichert, die dynamisch von einem Controller über die Kontrollebene aktualisiert werden können. Daraus ergibt sich zum Beispiel der Vorteil, dass Daten- und Kontrollebene im Design beziehungsweise in Untersuchungen und Analysen getrennt voneinander betrachtet werden können. \\
 Ein weiteres Prinzip ist, dass ein derartiger Controller, obwohl er sich in einem SDN Netzwerk auf mehrere virtuelle oder physikalische Bestandteile verteilen kann, sich trotzdem logisch wie eine zentrale Einheit verhält, die über globales Wissen verfügt. Diese Eigenschaft bringt den Vorteil der schnelleren und effizienteren dynamischen Anpassung des Netzwerks.
-Als dritten Grundsatz wird in [1] die Offenheit der Schnittstellen genannt, worauf ich hier aber aus Relevanzgründen nicht näher eingehen möchte. Viel interessanter ist die Eigenschaft der Programmierbarkeit eines SDN Netzes. Dies wird durch die Entkopplung von Daten- und Kontrollebene ermöglicht und macht das Netzwerk extrem anpassbar an verschiedene Anwendungen. Laut [1] lässt sich das Netzwerk dann als eine einzige programmierbare Einheit behandeln und nicht als eine Anhäufung von Geräten, die individuell konfiguriert werden müssen.\\
+Als dritter Grundsatz wird in \cite{IEEEhowto:sdn} die Offenheit der Schnittstellen genannt, worauf ich hier aber aus Relevanzgründen nicht näher eingehen möchte. Viel interessanter ist die Eigenschaft der Programmierbarkeit eines SDN Netzes. Dies wird durch die Entkopplung von Daten- und Kontrollebene ermöglicht und macht das Netzwerk extrem anpassbar an verschiedene Anwendungen. Laut \cite{IEEEhowto:sdn} lässt sich das Netzwerk dann als eine einzige programmierbare Einheit behandeln und nicht als eine Anhäufung von Geräten, die individuell konfiguriert werden müssen.\\
 OpenFlow ist das am weitesten verbreitete Kommunikationsprotokoll, das in SDN eingesetzt wird. Es fungiert als Schnittstelle zwischen Datenebene und Kontrollebene, indem es direkten Zugriff auf Weiterleitungsverhalten eines Switches ermöglicht. Man spricht daher auch häufig von OpenFlow Kontrollern oder OpenFlow Switches. 
 
 
 \section{Architektur der RSU Cloud}
 
-Ein Fahrzeugnetzwerk (Vehicular Grid) besteht grob aus zwei Arten von Komponenten. Auf der einen Seite sind das Lokalisierungssysteme, Sensoren, Mikroprozessoren und Funkeinheiten, die an einem Fahrzeug montiert sind - sogenannte On-Board Units(OBUs) - und auf der anderen Seite  Sensoren und Mikrocontroller, die fest in die Straßen integriert sind, genannt Roadside Units(RSUs). Diese Komponenten vernetzt bilden ein sogenanntes Fahrzeug Ad hoc Netzwerk (VANET).  Der neue Ansatz, der in diesem Paper diskutiert wird, ist die Zusammenfassung der RSUs zu einer RSU Cloud.\\
-Da eine derartige Cloud demnach alle nachgefragten Sicherheits- sowie Unterhaltungsdienste bereitstellen können muss, werden hohe Anforderungen an sie gestellt. Eine RSU Cloud muss nicht nur verlässlich sondern auch sehr leistungsstark in Sachen Datenrate und Latenz sein, um größtmögliche Sicherheit zu garantieren und somit die Akzeptanz in der Bevölkerung zu erlangen.\\
+Ein Fahrzeugnetzwerk (Vehicular Grid) besteht im Prinzip aus zwei Arten von Komponenten. Auf der einen Seite sind das Lokalisierungssysteme, Sensoren, Mikroprozessoren und Funkeinheiten, die an einem Fahrzeug montiert sind - sogenannte On-Board Units (OBUs) - und auf der anderen Seite  Sensoren und Mikrocontroller, die fest in die Straßen integriert sind, genannt Roadside Units (RSUs). Diese Komponenten vernetzt bilden ein sogenanntes Fahrzeug Ad hoc Netzwerk (VANET). Der neue Ansatz, der in diesem Paper diskutiert wird, ist die Zusammenfassung der RSUs zu einer RSU Cloud.\\
+Da eine derartige Cloud demnach alle nachgefragten Sicherheits- sowie Unterhaltungsdienste bereitstellen können muss, werden hohe Anforderungen an sie gestellt. Eine RSU Cloud muss nicht nur verlässlich sondern auch sehr leistungsstark hinsichtlich Datenrate und Latenz sein, um größtmögliche Sicherheit zu garantieren und somit die Akzeptanz in der Bevölkerung zu erlangen.\\
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{strasse.pdf}
-	\caption{eine Grafik ohne Sinn und Verstand}
+	\caption{RSU Cloud Architektur}
 	\label{img:grafik-dummy}
 \end{figure}
 
-Eine solche RSU Cloud besteht dabei neben gewöhnlichen RSUs zudem aus RSU Mikrodatenzentren. Ein Mikrodatenzentrum besteht aus einer kleinen Recheneinheit und einem OpenFlow Switch, sodass es in ein SDN Netzwerk eingebunden werden kann. Softwareseitig besteht ein Mikrodatenzentrum aus einem Betriebssystem und einem Hypervisor, der es mittels Virtualisierung ermöglicht mehrere virtuelle Maschinen dynamisch auf einem Host auszuführen. Auf einem solchen Mikrodatenzentrum sollen dann die Dienste gehostet werden, die von den Verkehrsteilnehmern nachgefragt werden. Dies hat den großen Vorteil, dass die Dienste sehr "nah" an den Konsumenten sind, was sich in einer höheren Verlässlichkeit und kürzeren Latenzzeiten bemerkbar macht. Die, zum Aufspannen einer Cloud in einem SDN Netzwerk, nötigen Softwarekomponenten wie ein OpenFlow Controller oder ein Cloud Kontroller sollen ebenfalls in manchen Mikrodatenzentren ausgeführt werden. Eine weitere neue Komponente, die im Originalpaper vorgestellt wurde, ist der RSU Cloud Resource Manager(CRM). Der CRM ist ebenfalls in manchen Mikrodatenzentren integriert und soll Informationen über das Hosten von Diensten, die Verschiebung von Diensten oder das Ändern von Weiterleitungsvorschriften verbreiten, indem er mit OpenFlow und Cloud Kontrollern kommuniziert. Des Weiteren hat er die Aufgabe, die richtigen Entscheidungen bezüglich der optimalen Lage und Anzahl an gehosteten Diensten und den dazugehörigen Weiterleitungsvorschriften zu treffen. Entscheidend ist hierbei, dass die Anzahl an Verschiebungen von virtuellen Maschinen möglichst gering gehalten wird, da sie zusätzlichen Netzwerkverkehr in Daten und Kontrollebene produzieren und somit negativen Einfluss auf Quality of Service und darüber hinaus auch zusätzliche Kosten für den Anbieter eines Dienstes haben. Im Weiteren soll nun die Formalisierung des zusätzlichen Netzwerkverkehrs, der durch eine Neukonfiguration des Netzes entsteht, beschrieben werden. Zunächst einmal ist der Begriff der Konfiguration einzuführen, der den Zustand des Netzes zum Zeitpunkt \(t_i\) beschreibt. Eine Konfiguration ist somit definiert als 3-Tupel \(<X^{t_i},Y^{t_i},Z^{t_i}>\) mit den Komponenten $X^{t_i}$  welche den Satz an Hosts darstellt, \(Y^{t_i}\)  die den Satz an Weiterleitungsvorschriften repräsentiert und \(Z^{t_i}\),  dem Satz an Vorschriften für die Weiterleitung eines Eingangs an mehrere Empfänger, den sogenannten Gruppenvorschriften. Zur Bestimmung des verursachten Netzverkehrs in der Datenebene werden nun die Verschiebungen von Diensten gezählt. Formal kann man die Verschiebungen vom Zeitpunkt \(t_i\) zum Zeitpunkt \(t_{i+1}\) mit der Formel \(|X^{t_i}-X^{t_{i+1}}|\) ausdrücken. Ein Spezialfall ist hier das Löschen eines Dienstes von einem Host, was nicht berücksichtigt wird, da kein Datenaustausch auf der Datenebene erforderlich ist. Für die Analyse des Verkehrs in der Kontrollebene werden die Veränderungen der Weiterleitungs- und Gruppenvorschriften herangezogen. Der Verkehr setzt sich hier aus der Summe der Weiterleitungs-beziehungsweise Gruppenvorschriften, die hinzugefügt oder gelöscht werden und außerdem aus der Anzahl der Weiterleitungsvorschriften die zu Gruppenvorschriften und der Gruppenregeln die zu Weiterleitungsvorschriften werden, zusammen. Daraus ergibt sich folgende Formel für den zusätzlichen Verkehr in der Kontrollebene: 
+Eine solche RSU Cloud besteht dabei neben gewöhnlichen RSUs zudem aus RSU Mikrodatenzentren. Ein Mikrodatenzentrum besteht aus einer kleinen Recheneinheit und einem OpenFlow Switch, sodass es in ein SDN Netzwerk eingebunden werden kann. Softwareseitig besteht ein Mikrodatenzentrum aus einem Betriebssystem und einem Hypervisor, der es mittels Virtualisierung ermöglicht, mehrere virtuelle Maschinen dynamisch auf einem Host auszuführen. Auf einem solchen Mikrodatenzentrum sollen dann die Dienste gehostet werden, die von den Verkehrsteilnehmern nachgefragt werden. Dies hat den großen Vorteil, dass die Dienste sehr \glqq nah\grqq{} an den Konsumenten sind, was sich in einer höheren Verlässlichkeit und kürzeren Latenzzeiten bemerkbar macht. Die, zum Aufspannen einer Cloud in einem SDN Netzwerk, nötigen Softwarekomponenten wie ein OpenFlow Controller oder ein Cloud Kontroller sollen ebenfalls in manchen Mikrodatenzentren ausgeführt werden. Eine weitere neue Komponente, die im Originalpaper vorgestellt wurde, ist der RSU Cloud Ressourcen Manager (CRM). Der CRM ist ebenfalls in manchen Mikrodatenzentren integriert und soll Informationen über das Hosten von Diensten, die Verschiebung von Diensten oder das Ändern von Weiterleitungsvorschriften verbreiten, indem er mit OpenFlow und Cloud Kontrollern kommuniziert. Des Weiteren hat er die Aufgabe, die richtigen Entscheidungen bezüglich der optimalen Lage und Anzahl an gehosteten Diensten und den dazugehörigen Weiterleitungsvorschriften zu treffen. Entscheidend ist hierbei, dass die Anzahl an Verschiebungen von virtuellen Maschinen möglichst gering gehalten wird, da sie zusätzlichen Netzwerkverkehr in Daten und Kontrollebene produzieren und somit negativen Einfluss auf Quality of Service und darüber hinaus auch zusätzliche Kosten für den Anbieter eines Dienstes haben. Im Weiteren soll nun die Formalisierung des zusätzlichen Netzwerkverkehrs, der durch eine Neukonfiguration des Netzes entsteht, beschrieben werden. Zunächst einmal ist der Begriff der Konfiguration einzuführen, der den Zustand des Netzes zum Zeitpunkt \(t_i\) beschreibt. Eine Konfiguration ist somit definiert als 3-Tupel \(<X^{t_i},Y^{t_i},Z^{t_i}>\) mit den Komponenten $X^{t_i}$, welche den Satz an Hosts darstellt, \(Y^{t_i}\), die den Satz an Weiterleitungsvorschriften repräsentiert und \(Z^{t_i}\),  dem Satz an Vorschriften für die Weiterleitung eines Eingangs an mehrere Empfänger, den sogenannten Gruppenvorschriften. Zur Bestimmung des verursachten Netzverkehrs in der Datenebene werden nun die Verschiebungen von Diensten gezählt. Formal kann man die Verschiebungen vom Zeitpunkt \(t_i\) zum Zeitpunkt \(t_{i+1}\) mit der Formel \(|X^{t_i}-X^{t_{i+1}}|\) ausdrücken. Ein Spezialfall ist hier das Löschen eines Dienstes von einem Host, was nicht berücksichtigt wird, da kein Datenaustausch auf der Datenebene erforderlich ist. Für die Analyse des Verkehrs in der Kontrollebene werden die Veränderungen der Weiterleitungs- und Gruppenvorschriften herangezogen. Der Verkehr setzt sich hier aus der Summe der Weiterleitungs-beziehungsweise Gruppenvorschriften, die hinzugefügt oder gelöscht werden und außerdem aus der Anzahl der Weiterleitungsvorschriften, die zu Gruppenvorschriften werden und der Gruppenvorschriften, die zu Weiterleitungsvorschriften werden, zusammen. Daraus ergibt sich folgende Formel für den zusätzlichen Verkehr in der Kontrollebene: 
 
 \begin{equation}
 \begin{split}
@@ -480,25 +486,25 @@ Eine solche RSU Cloud besteht dabei neben gewöhnlichen RSUs zudem aus RSU Mikro
 \end{equation}
 
 
-\section{"related Work" oder Hintergrund(siehe III. Background)}
-\begin{itemize}
-\item Darlegung anderer Ansätze und deren Vor- und Nachteile
-\begin{itemize}
-\item Cloud Computing in VANETs
-\item Cloud Resource Management
-\end{itemize}
-\end{itemize}
+\section{Andere Architekturen}
 
-\section{Cloud Resource Management}
+In diesem Kapitel möchte ich kurz zwei weitere Cloud Architekturen vorstellen und gegebenenfalls Vor- oder Nachteil zu der hier vorgestellten Architektur nennen. In \cite{IEEEhowto:star} wird eine Cloud Architektur vorgestellt, die die OBUs in eine Cloud integriert. Es wird davon ausgegangen, dass die OBUs genug Rechenleistung besitzen, um als mobile Cloud Server zu agieren. Die RSUs dienen in dieser Architektur dazu, alle relevanten Informationen über jeden mobilen Cloud Server in einem Verzeichnis zu speichern. Dazu gehören die Art der Ressourcen, die der mobile Cloud Server anbietet, die die Eigenschaften wie zum Beispiel den Speicherplatz der Ressourcen sowie den Preis, der für die Nutzung der Ressource anfällt. Ebenfalls werden diese Informationen örtlich begrenzt auf benachbarte RSUs verteilt und somit die Ressourcen einem größeren Pool an potentiellen Nutzern zur Verfügung gestellt. Ein Managementsystem namens CROWN hilft hierbei den Fahrzeugen geeignete Ressourcen im Netzwerk zu finden. So kann zum Beispiel ein Fahrzeug CROWN beauftragen, eine zu seinen Bedingungen passende Ressource zu finden. Den Fahrzeugen bietet sich jedoch auch die Möglichkeit, selbst einen präferierten mobilen Cloud Server auszuwählen. Dieser Ansatz hat gegenüber der RSU-Cloud den Vorteil, dass Cloud Computing auch dort möglich ist, wo keine RSUs zur Verfügung stehen.\\
+Eine weitere Cloud Architektur wird in \cite{IEEEhowto:rethinking} dargelegt. Bei diesem Ansatz agieren die RSUs als Gateway zwischen den Fahrzeugen und einer klassischen Cloud. Die Gateways übernehmen hierbei auch gleichzeitig die Virtualisierung. Ein Vorteil dieses Ansatzes ist darin begründet, dass die RSUs aufgrund ihrer Integration in die kabelgebundene Infrastruktur mit schnellen Verbindungen zu den Cloud Hosts ausgestattet werden können. Somit können sie bandbreitenintensive Dienste problemlos zur Verfügung stellen. Ein Nachteil könnten hier höhere Latenzzeiten sein, da die Dienste unter Umständen weit vom Endkonsumenten entfernt gehostet werden könnten. \\
+Wie man sieht hat, jede Cloud Architektur seine Vorteile. Besonders interessant ist daher die in diesem Paper vorgestellte RSU-Cloud Architektur, da sie auch gleichzeitig neben einer schon existierenden anderen Cloud eingesetzt werden kann. 
 
-Neben der Architektur der RSU Cloud als solches ist der Cloud Resource Manager eine weitere
-Neuerung, die in diesem Paper vorgestellt werden soll.  Aufgabe des CRM ist es, gleichzeitig den Netzwerkverkehr, der durch Neukonfiguration der Cloud entsteht, die Kosten für die Installation von Diensten und den Delay, der durch das Routing durch das physikalische Netz entsteht zu minimieren.
-Um dieses Optimierungsproblem zu lösen muss ein formales Modell dafür gefunden werden, welches nun beschrieben werden soll. Die Problemstellung lässt sich wie folgt darstellen: Gegeben sei ein Graf \(G=(V,E)\), ein Reihe von Diensten \(S\), ein Set an durchschnittlichen Nachfragen \(D=\{d_{t_1},d_{t_2},…d_{t_{|T|}}\}\) über eine Zeitspanne \(T=\{t_1,t_2,… t_{|T|}\}\) mit einer Anfangskonfiguration \(\psi^{t_i}=<X^{t_i},Y^{t_i},Z^{t_i}>\) für die Nachfrage \(d_{t_1}\)
+
+
+
+
+\section{Ressourcen Management in der Cloud}
+
+Neben der Architektur der RSU Cloud als solche ist der CRM eine weitere
+Neuerung, die in diesem Paper vorgestellt werden soll.  Aufgabe des CRM ist es, gleichzeitig den Netzwerkverkehr, der durch Neukonfiguration der Cloud entsteht, die Kosten für die Installation von Diensten und den Delay, der durch das Routing durch das physikalische Netz entsteht, zu minimieren.
+Um dieses Optimierungsproblem zu lösen, muss ein formales Modell dafür gefunden werden, welches nun beschrieben werden soll. Die Problemstellung lässt sich wie folgt darstellen: Gegeben sei ein Graph \(G=(V,E)\), eine Reihe von Diensten \(S\), ein Set an durchschnittlichen Nachfragen \(D=\{d_{t_1},d_{t_2},…d_{t_{|T|}}\}\) über eine Zeitspanne \(T=\{t_1,t_2,… t_{|T|}\}\) mit einer Anfangskonfiguration \(\psi^{t_i}=<X^{t_i},Y^{t_i},Z^{t_i}>\) für die Nachfrage \(d_{t_1}\)
 zum Zeitpunkt \(t_1\). V sind hierbei die RSU Mikrodatenzentren, die über die Kanten E mit
 den Bandbreitenkapazitäten \(C_e \forall e \in E\), miteinander verbunden sind. Zum
-Zeitpunkt \(t_i \in T\) gibt, es eine Nachfrage \(b_{n,k}\) für einen Service \(k, k \in S\) am Knoten \(n, n\in V\) und eine durchschnittliche Nachfrage im Netzwerk \(d_{t_i}\). Das Problem ist nun aus einer Pareto-Menge an Konfigurationen \(\Psi^{t_i}\) eine Konfiguration zu finden, die die Anzahl an Verschiebungen von Diensten minimiert \(\langle \psi_{j}^{t_i}|\min(X_{j}^{t_i}-X^{t_{i-1}}),\forall \psi_{j}^{t_i}=<X_{j}^{t_i},Y_{j}^{t_i},Z_{j}^{t_i}>, \psi_{j}^{t_i} \in \Psi^{t_i}  \rangle\) Jede Konfiguration \(\psi_{j}^{t_i} \in \Psi^{t_i}\) kann einem Dienst bis zu einer Schwelle \(\phi_k, \forall k \in S\) ausreichend Ressourcen zur Verfügung stellen, ohne Kompromisse in Sachen Delay Minimierung und Ausbalancieren des Netzes eingehen zu müssen.\\
-
-Der Delay, den ein Packet beim Durchlaufen des Kommunikationsnetzes erfährt, wir mittels einer Lookup-Tabelle modelliert. Die Verzögerung, die auf einem Pfad entsteht, setzt sich dabei aus der Summe der Verzögerungen in den einzelnen Kanten zusammen. Berücksichtigt werden die Ausbreitungsverzögerung \(T_r)\), die Warteschlangenverzögerung \(T_q\), die Sendeverzögerung \(T_g\) und die Verarbeitungsverzögerung \(T_p\). Um \(T_q\) zu berechnen, wird ein G/G/1 Warteschlangensystem angenommen. Das bedeutet .. Mit der Annahme, dass es sich beim Ankunfts- und Bedienprozess um Poissonprozesse mit den Ankunftsintervallen \(\lambda\) beziehungsweise Bedienzeit \(\mu\) handelt, lässt sich die Warteschlangenverzögerung mit der Formel (\ref{eq:Tg}) von Kingsman \cite{IEEEhowto:king} approximieren. \(c_a\) und \(c_s\) sind hierbei die Varianzkoeffizienten, die man durch einsetzen der jeweiligen Erwartungswerte \(t_a\)/\(t_s\) und Standardabweichungen \(\sigma_a\)/\(\sigma_a\) des Ankunfts-und Bedienprozesses in die Formeln \(c_a=\frac{\sigma_a}{t_a}\) und \(c_s=\frac{\sigma_s}{t_s}\).
+Zeitpunkt \(t_i \in T\) gibt es eine Nachfrage \(b_{n,k}\) für einen Service \(k, k \in S\) am Knoten \(n, n\in V\) und eine durchschnittliche Nachfrage im Netzwerk \(d_{t_i}\). Das Problem ist nun aus einer Pareto-Menge an Konfigurationen \(\Psi^{t_i}\) eine Konfiguration zu finden, die die Anzahl an Verschiebungen von Diensten minimiert \(\langle \psi_{j}^{t_i}|\min(X_{j}^{t_i}-X^{t_{i-1}}),\forall \psi_{j}^{t_i}=<X_{j}^{t_i},Y_{j}^{t_i},Z_{j}^{t_i}>, \psi_{j}^{t_i} \in \Psi^{t_i}  \rangle\) Jede Konfiguration \(\psi_{j}^{t_i} \in \Psi^{t_i}\) kann einem Dienst bis zu einer Schwelle \(\phi_k, \forall k \in S\) ausreichend Ressourcen zur Verfügung stellen, ohne Kompromisse in Sachen Delay Minimierung und Ausbalancierung des Netzes eingehen zu müssen.\\
+Der Delay, den ein Paket beim Durchlaufen des Kommunikationsnetzes erfährt, wird mittels einer Lookup-Tabelle modelliert. Die Verzögerung, die auf einem Pfad entsteht, setzt sich dabei aus der Summe der Verzögerungen in den einzelnen Kanten zusammen. Berücksichtigt werden die Ausbreitungsverzögerung \(T_r\), die Warteschlangenverzögerung \(T_q\), die Sendeverzögerung \(T_g\) und die Verarbeitungsverzögerung \(T_p\). Um \(T_q\) zu berechnen, wird ein G/G/1 Warteschlangensystem angenommen. Mit der Annahme, dass es sich beim Ankunfts- und Bedienprozess um Poissonprozesse mit den Ankunftsintervallen \(\lambda\) beziehungsweise Bedienzeit \(\mu\) handelt, lässt sich die Warteschlangenverzögerung mit der Formel (\ref{eq:Tq}) von Kingsman \cite{IEEEhowto:king} approximieren. \(c_a\) und \(c_s\) sind hierbei die Varianzkoeffizienten, die man durch Einsetzen der jeweiligen Erwartungswerte \(t_a\)/\(t_s\) und Standardabweichungen \(\sigma_a\)/\(\sigma_s\) des Ankunfts-und Bedienprozesses in die Formeln \(c_a=\frac{\sigma_a}{t_a}\) und \(c_s=\frac{\sigma_s}{t_s}\) erhält.
 
 \begin{equation}
 T_q=\frac{c_a^2+c_s^2}{2}\cdot \frac{\frac{\lambda}{\mu}}{\mu-\lambda}
@@ -512,7 +518,7 @@ T_r=\left(\frac{Laenge}{\frac{2}{3}\cdot Lichtgeschwindigkeit}\right)
 \label{eq:Tr}
 \end{equation}
 
-Als Verarbeitungsverzögerung wird ein fester Wert im Mikrosekundenbereich angenommen und die Sendeverzögerung wird mit Formel \ref{eq:Tq} berechnet.
+Als Verarbeitungsverzögerung wird ein fester Wert im Mikrosekundenbereich angenommen und die Sendeverzögerung wird mit Formel (\ref{eq:Tg}) berechnet.
 
 \begin{equation}
 T_g=\left(\frac{Packetlaenge}{C_e}\right)
@@ -522,8 +528,8 @@ T_g=\left(\frac{Packetlaenge}{C_e}\right)
 
 \subsection{Mehrkriterielle ganzzahlige lineare Optimierung}
 
-Um die Optimierung bezüglich mehrerer Kriterien nun durchzuführen wird der CRM als eine Mehrkriterielle ganzzahlige lineare Optimierung modelliert. Das Neue an diesem Modell ist, dass gleichzeitig vier Kriterien nämlich jeweils der Overhead, der durch das Umkonfigurieren des Netzwerks in Daten- und Kontrollebene entsteht, sowie die Anzahl an Hosts und die Verzögerung der Netzinfrastruktur minimiert wird. Das von Salahuddin et al. dafür gefundene Modell lässt sich in zwei Optimierungsprobleme überführen.
-So wird in (\ref{eq:min1}) die Anzahl von Verschiebungen von Diensten in der Cloud (1. Summand) und gleichzeitig die Anzahl von Änderungen in der Kontrollebene (2. Summand) minimiert. Mit dem Gewichtungsfaktor \(\rho\) lässt sich die Priorität bestimmen mit der die Kriterien in die Optimierung eingehen. 
+Um die Optimierung bezüglich mehrerer Kriterien nun durchzuführen, wird der CRM als eine Mehrkriterielle Ganzzahlige Lineare Optimierung modelliert. Das Neue an diesem Modell ist, dass gleichzeitig vier Kriterien, nämlich jeweils der Overhead, der durch das Umkonfigurieren des Netzwerks in Daten- und Kontrollebene entsteht, sowie die Anzahl an Hosts und die Verzögerung der Netzinfrastruktur minimiert wird. Das von Salahuddin et al. dafür gefundene Modell lässt sich in zwei Optimierungsprobleme überführen.
+So wird in (\ref{eq:min1}) die Anzahl von Verschiebungen von Diensten in der Cloud (1. Summand) und gleichzeitig die Anzahl von Änderungen in der Kontrollebene (2. Summand) minimiert. Mit dem Gewichtungsfaktor \(\rho\) lässt sich die Priorität bestimmen, mit der die Kriterien in die Optimierung eingehen. 
 
 \begin{equation}
      \min\left\{\begin{split} \sum\limits_{m=1}^N \sum\limits_{k=1}^S \rho &\cdot\alpha_{m,k} + \\
@@ -533,8 +539,8 @@ So wird in (\ref{eq:min1}) die Anzahl von Verschiebungen von Diensten in der Clo
 \end{equation}
 
 Die Summanden \(\alpha_{m,k} \forall 1\le m \le |V|, 1 \le k \le S\) nehmen dabei den Wert 1 an, falls im k-ten Host der m-te Dienst hinzugekommen ist. Und andernfalls haben sie den Wert 0. Die Aufsummierung von \(\alpha_{m,k}\) über alle Mikrodatenzentren und Dienste ergibt dann den Overhead, der durch das Verschieben von Diensten verursacht wird. 
-Analog sind die Summanden \(beta_{k}^{m,n,x}\) und \(\gamma_{k}^{m,n,x}\) auch binäre Indikatoren, die ein Hinzufügen beziehungsweise ein Löschen von Weiterleitungsregeln anzeigen. Diese werden ebenfalls Aufsummiert und stellen den Overhead in der Kontrollebene dar.\\
-Das zweite Optimierungsproblem ist in (\ref{eq:min2}) zu sehen und widmet sich der Minimierung der Anzahl an Hosts und der Verzögerung. Wie im ersten Optimierungsproblem wird auch hier die Priorität der Kriterien mit einem Gewichtungsfaktor \(P\) definiert.
+Analog sind die Summanden \(beta_{k}^{m,n,x}\) und \(\gamma_{k}^{m,n,x}\) auch binäre Indikatoren, die ein Hinzufügen beziehungsweise ein Löschen von Weiterleitungsregeln anzeigen. Diese werden ebenfalls aufsummiert und stellen den Overhead in der Kontrollebene dar.\\
+Das zweite Optimierungsproblem ist in (\ref{eq:min2}) zu sehen und widmet sich der Minimierung der Anzahl an Hosts und der Verzögerung. Wie im ersten Optimierungsproblem, wird auch hier die Priorität der Kriterien mit einem Gewichtungsfaktor \(P\) definiert.
 
 \begin{equation}
 \min \left\{ \sum_{m=1}^N \sum_{k=1}^S P \cdot h_{m,k} + \sum_{e=0}^{|E|} (1-P) \cdot \frac{d_e}{q_{c_{e},e}} \right\}
@@ -546,66 +552,72 @@ Im zweiten Term wird durch Aufsummierung der Verzögerungen in den einzelnen Kan
 
 
 \subsection{Heuristischer Ansatz}
-In \cite{IEEEhowto:orig} wird darüber hinaus ein weiterer Ansatz vorgestellt, um das Problem des Ressourcen Management der Cloud zu lösen. Hierbei handelt es sich um einen heuristischen Ansatz, der sich in 2 Schritte gliedern lässt. Im ersten Schritt wird eine Pareto-Menge an optimalen Konfigurationen erzeugt, die ein Optimum darstellen, was die Kriterien Verzögerung im Netzwerk und Anzahl der gehosteten Instanzen für eine bestimmte druchschnittliche Nachfrage betrifft. Im zweiten Schritt wird dann aus dieser Pareto-Menge eine optimale Konfiguration gesucht, die die Verschiebung von virtuellen Maschinen und den damit verbundenen Overhead in der der Kontrollebene minimiert. \\
+In \cite{IEEEhowto:orig} wird darüber hinaus ein weiterer Ansatz vorgestellt, um das Problem des Ressourcen Managements der Cloud zu lösen. Hierbei handelt es sich um einen heuristischen Ansatz, der sich in zwei Schritte gliedern lässt. Im ersten Schritt wird eine Pareto-Menge an optimalen Konfigurationen erzeugt, die ein Optimum darstellen, was die Kriterien Verzögerung im Netzwerk und Anzahl der gehosteten Instanzen für eine bestimmte druchschnittliche Nachfrage betrifft. Im zweiten Schritt wird dann aus dieser Pareto-Menge eine optimale Konfiguration gesucht, die die Verschiebung von virtuellen Maschinen und den damit verbundenen Overhead in der Kontrollebene minimiert. \\
 Die Pareto-Menge wird erzeugt, indem zuerst zufällig \(\lceil N/2 \rceil\) Knoten als Hosts, die die RSUs bedienen sollen, ausgewählt werden. Den übrigen RSUs werden anschließend zufällig nacheinander Hosts zugeteilt. Diese Vorgehensweise hat den Vorteil, dass die Last gleichmäßig über das gesamte Netz verteilt wird und die Verzögerung für einen festen Prozentsatz an Nachfrage ideal ist.
 Dies wird wiederholt, bis alle RSUs bedient werden und resultiert dann in einer Konfiguration.
 Mit diesem Verfahren werden dann \(n^2\) Konfigurationen generiert und anschließend die Konfiguration \(\psi_j^{t_i} \in \Psi^{t_i}\) mit der geringsten Verzögerung im Netz in die Pareto-Menge aufgenommen.
-Um die Pareto-Menge zu vervollständigen wird aus jeder der \(n^2\) Konfigurationen  die Hälfte der Hosts zufällig ausgewählt und auf dieser Basis das Verfahren neu angewendet. 
+Um die Pareto-Menge zu vervollständigen, wird aus jeder der \(n^2\) Konfigurationen  die Hälfte der Hosts zufällig ausgewählt und auf dieser Basis das Verfahren neu angewendet. 
 Ist die Pareto-Menge \(\Psi^{t_i}\) erzeugt, so kann man nun die Konfiguration, die die Anzahl an Verschiebungen minimiert \(\langle \psi_{j}^{t_i}|\min(X_{j}^{t_i}-X^{t_{i-1}}),\forall \psi_{j}^{t_i}=<X_{j}^{t_i},Y_{j}^{t_i},Z_{j}^{t_i}>, \psi_{j}^{t_i} \in \Psi^{t_i}  \rangle\) auswählen.
 
 
 \subsubsection{Verbesserung durch Bestärkendes Lernen}
 
-Der hier vorgestellte heuristische Ansatz betrachtet bei der Minimierung jedoch nur den Overhead, der durch die kurzfristige Änderung der Nachfrage vom Zeitpunkt \(t_{i-1}\) zum Zeitpunkt \(t_i\) erforderlich ist. Unter Umständen könnte es jedoch besser sein bei der Auswahl der Konfiguration auch langfristige Auswirkungen auf den verursachten Overhead in die Entscheidungsfindung miteinzubeziehen, um dieses auch auf Lange Sicht zu optimieren. 
-
-
- 
-Wie zum Beispiel bei (\ref{eq:Tq}) oder \cite{IEEEhowto:sum}.
+Der hier vorgestellte heuristische Ansatz betrachtet bei der Minimierung jedoch nur den Overhead, der durch die kurzfristige Änderung der Nachfrage vom Zeitpunkt \(t_{i-1}\) zum Zeitpunkt \(t_i\) erforderlich ist. Unter Umständen könnte es jedoch besser sein, bei der Auswahl der Konfiguration auch langfristige Auswirkungen auf den verursachten Overhead in die Entscheidungsfindung miteinzubeziehen, um diesen auch auf lange Sicht zu optimieren.
+Diese Problemstellung wird gelöst, indem man das Problem als einen Markow-Entscheidungsprozess (MDP) modelliert. Im Zuge dessen wird jede Konfigurationen \(\psi_j^{t_i} \in \Psi^{t_i}\), die sich in der - durch die Heuristik erzeugten - Pareto-Menge befindet, als Zustand im MDP angesehen. Die Aktionen des MDP sind definiert als 
+\(A=\{a_1,a_2,a_3\}\), wobei jeweils eine Konfiguration mit 2, 3 und 5 Hosts ausgewählt wird.  Als Zustandsübergangswahrscheinlichkeit wird eine Wahrscheinlichkeitsmatrix \(P\) herangezogen, wobei Zustandsübergänge nur zwischen zwei zeitlich aufeinanderfolgenden Konfigurationen stattfinden können.
+Aus dem MDP lässt sich dann eine Strategie zur Auswahl einer Konfiguration ableiten, die die Verschiebungen von virtuellen Maschinen auf längere Sicht minimiert. Dabei kann es durchaus vorkommen, dass die Anzahl an Verschiebungen zu einem bestimmten Zeitpunkt nicht optimal sind, langfristig jedoch Sinn machen.
 
 
 \section{Simulationsergebnisse}
-\begin{itemize}
-\item Vergleich zwischen drei verschiedenen Ansätzen
-\item Verbesserung der Heuristik durch Reinforcement Learning
-\end{itemize}
 
+In diesem Kapitel werden die Ergebnisse der Linearen Optimierung (CRM Optimization) und des heuristischen Ansatzes (CRM Heuristic) erläutert. Um einen aussagekräftigen Vergleich durchzuführen, wird ein weiterer Ansatz (Cost Optimization) zur Lösung des Ressourcen Managements herangezogen. Bei diesem Ansatz handelt es sich um eine naive Herangehensweise, die das Ziel hat, die Dienste so auf eine minimale Anzahl an Hosts im Netzwerk zu verteilen, dass die Nachfrage bedient werden kann. Die Verzögerung, die sich dadurch für die Dienste ergeben bleiben bei diesem Ansatz völlig unberücksichtigt. Dies geht auch aus Abbildung \ref{img:delay} hervor, in der man sieht, dass Lineare Optimierung in Sachen Verzögerung um ein Vielfaches besser abschneidet als der naive Ansatz.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[trim=0 3cm 0 1cm,scale=0.25]{grafik/delay.pdf}
-	\caption{MDP}
+	\caption{Der heuristische Ansatz bewegt sich sehr nahe an der optimalen Verzögerung
+	(Diagramm entnommen aus \cite{IEEEhowto:orig})}
 	\label{img:delay}
 \end{figure}
+
+Der heuristische Ansatz ist dabei nur geringfügig im Nachteil gegenüber der Linearen Optimierung. Auch bei der Anzahl an Verschiebungen von Diensten zeigt sich ein ähnliches Bild. Wie in Abbildung \ref{img:VMMIG} zu sehen ist, sind die lineare Optimierung sowie die Heuristik deutlich besser als der naive Ansatz.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[trim=0 3cm 0 1cm,scale=0.25]{grafik/VMMIG.pdf}
-	\caption{MDP}
+	\caption{Die Heuristik schneidet besser ab als der naive Ansatz.
+	(Diagramm entnommen aus \cite{IEEEhowto:orig})}
 	\label{img:VMMIG}
 \end{figure}
 
+Was den Overhead in der Kontrollebene angeht, so performt hier die Heuristik am schlechtesten. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[trim=0 3cm 0 1cm,scale=0.25]{grafik/CPM.pdf}
-	\caption{MDP}
+	\caption{Die Heuristik verursacht am meisten Overhead in der Kontrollebene.
+	(Diagramm entnommen aus \cite{IEEEhowto:orig})}
 	\label{img:CPM}
 \end{figure}
 
+
+In Abbildung \ref{img:MDP} wird die Heuristik mit der Verbesserung durch den MDP mit der Heuristik ohne diese Verbesserung verglichen. Man sieht, dass die Verbesserung durch den MDP zwar anfänglich mehr VM Verschiebungen verursacht, die sich aber auf lange Sicht als vorteilhaft erweisen und somit insgesamt weniger Verschiebungen verursacht.
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[trim=0 3cm 0 1cm,scale=0.25]{grafik/MDP.pdf}
-	\caption{MDP}
+	\includegraphics[trim=0 2cm 0 1cm,scale=0.25]{grafik/MDP.pdf}
+	\caption{Über einen langen Zeitraum ist machen sich die Vorteile des MDP bemerkbar.
+	(Diagramm entnommen aus \cite{IEEEhowto:orig})}
 	\label{img:MDP}
 \end{figure}
 
 
 
 \section{Fazit}
-\begin{itemize}
-\item Zusammenfassung der Fakten
-\item Weiterführende Arbeit
-\end{itemize}
+
+In diesem Paper wurde in Form einer Zusammenfassung eine neuartige RSU Cloud mit zugehörigem Ressourcen Management vorgestellt. Der große Vorteil dieser Architektur ist, dass sie dank SDN flexibel konfigurierbar ist und sich somit dynamisch an die Nachfrage anpassen lässt. Dies spart Kosten für den Dienstanbieter und wirkt sich zudem positiv auf die Latenzzeiten aus, da die Dienste möglichst nah am Konsumenten gehostet werden. Ein weiterer Vorteil ist, dass sich die Architektur leicht neben schon bestehenden, anderen Cloud Architekturen einsetzen lässt.
+Eine Einführung in SDN sowie die Betrachtung anderer Cloud Architekturen geben nützliche Hintergrundinformationen zum Themengebiet.
+
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
@@ -634,18 +646,31 @@ Wie zum Beispiel bei (\ref{eq:Tq}) oder \cite{IEEEhowto:sum}.
 
 \begin{thebibliography}{1}
 
+\bibitem{IEEEhowto:orig}
+Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani \emph{Software Defined Networking for RSU Clouds in support of The Internet of Vehicles}, IEEE Internet of Things Journal, VOL. X, NO. X, November 2014.
+
+
 \bibitem{IEEEhowto:sdn}
 Michael Jarschel, Thomas Zinner, Tobias Hoßfeld, Phuoc Tran-Gia, and Wolfgang Kellerer \emph{Interfaces, attributes, and use cases: A compass for SDN}, Communications Magazine, IEEE, 2014.
 
-\bibitem{IEEEhowto:orig}
-Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani \emph{Software Defined Networking for RSU Clouds in support of The Internet of Vehicles}, IEEE Internet of Things Journal, VOL. X, NO. X, November 2014.
 
 \bibitem{IEEEhowto:sum}
 Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani and Soumaya Cherkaoui \emph{RSU Cloud and its Resource Management in
 support of Enhanced Vehicular Applications}, Globecom 2014 Workshop - Cloud Computing Systems, Networks, and Applications, 2014.
 
 \bibitem{IEEEhowto:king}
-Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani \emph{Software Defined Networking for RSU Clouds in support of The Internet of Vehicles}, IEEE Internet of Things Journal, VOL. X, NO. X, November 2014.
+G. Curry and R. Feldman \emph{Manufacturing Systems Modeling and Analysis}, Springer Heidelberg Dordrecht, 2nd Edition, 2011.
+
+\bibitem{IEEEhowto:star}
+K. Mershad and H. Artail \emph{Finding a STAR in a Vehicular Cloud}, IEEE
+Intelligent Transportation Systems Magazine, vol. 5, no. 2, pp. 55-68, 2013.
+
+\bibitem{IEEEhowto:rethinking}
+R. Hussain, J. Son, H. Eun, S. Kim and H. Oh \emph{Rethinking Vehicular
+Communications: Merging VANET with cloud computing}, IEEE 4th
+International Conference on Cloud Computing Technology and Science
+(CloudCom), Taipei, 2012.
+
 
 \end{thebibliography}
 

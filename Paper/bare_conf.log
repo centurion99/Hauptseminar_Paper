@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  30 MAY 2015 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  31 MAY 2015 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,134 +494,169 @@ G,.JBIG2,.JB2,.eps]
 (c:/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+))
+Underfull \hbox (badness 10000) in paragraph at lines 452--457
+[]\OT1/ptm/m/n/10 Intelligente Trans-port-sys-te-me be-zeich-nen ein
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Kommunikations-Framework f[]ur die Un-terst[]utzung des
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Was-ser-we-ge und ein gro^^Yes ak-tu-el-les For-schungs-ge-biet
+.
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Durch die da-mit ein-her-ge-hen-de Zu-sam-menf[]uhrung von
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Ver-kehrs zur Stau-ver-mei-dung oder durch die War-nung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 vor po-ten-ti-el-len Ge-fah-renstel-len in Echt-zeit er-reicht
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 wer-den. Ge-ra-de im Stra-^^Yen-ver-kehr wer-den je-doch von
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 den Ver-kehrs-teil-neh-mern auch im-mer mehr Diens-te zur
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 an band-brei-ten-in-ten-si-ven An-wen-dun-gen stel-len gro^^Ye
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Die Res-sour-cen m[]ussen in der Re-gel bei ei-nem Cloud
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 mit dem Ti-tel: []Soft-wa-re De-fi-ned Net-wor-king for RSU
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 auf die Netz-werk Per-for-manz aus-wir-ken. Dies er-for-dert
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Mein ei-ge-ner Bei-trag ist die Zu-sam-men-fas-sung der in
+ []
+
+
+Underfull \hbox (badness 4954) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 Res-sour-cen Ma-na-ge-ments. Au-^^Yer-dem wer-de ich die-ses
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 The-men-ge-biet durch re-le-van-te Hin-ter-grund-in-for-ma-tio-
+nen
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 ge-ge-ben. In Ab-schnitt III fin-den sich ei-ne Dar-stel-lung
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 452--457
+\OT1/ptm/m/n/10 der Si-mu-la-tio-nen pr[]asentiert und mit an-de-ren Ans[]atzen
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
-\OT1/ptm/m/n/10 das Lo-ka-li-sie-rungs-sys-te-me, Sen-so-ren, Mi-kro-pro-zes-so
--ren
+Underfull \hbox (badness 3907) in paragraph at lines 470--472
+\OT1/ptm/m/n/10 in-te-griert sind, ge-nannt Road-si-de Units (RSUs). Die-se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
-\OT1/ptm/m/n/10 in-te-griert sind, ge-nannt Road-si-de Units(RSUs). Die-se
- []
-
-
-Underfull \hbox (badness 6691) in paragraph at lines 464--466
+Underfull \hbox (badness 6691) in paragraph at lines 470--472
 \OT1/ptm/m/n/10 Da ei-ne der-ar-ti-ge Cloud dem-nach al-le nach-ge-frag-ten
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 464--466
+Underfull \hbox (badness 1389) in paragraph at lines 470--472
 \OT1/ptm/m/n/10 muss, wer-den ho-he An-for-de-run-gen an sie ge-stellt. Ei-ne
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 464--466
+Underfull \hbox (badness 3460) in paragraph at lines 470--472
 \OT1/ptm/m/n/10 gr[]o^^Ytm[]ogliche Si-cher-heit zu ga-ran-tie-ren und so-mit d
 ie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
+Underfull \hbox (badness 10000) in paragraph at lines 470--472
 
  []
 
 <strasse.pdf, id=10, 387.69844pt x 489.32813pt>
 File: strasse.pdf Graphic file (type pdf)
  <use strasse.pdf>
-Package pdftex.def Info: strasse.pdf used on input line 469.
+Package pdftex.def Info: strasse.pdf used on input line 475.
 (pdftex.def)             Requested size: 232.62085pt x 293.59914pt.
  [2 <./strasse.pdf>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 496.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 503.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 496.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 503.
 
-
-Underfull \hbox (badness 2799) in paragraph at lines 494--500
-[]\OT1/ptm/m/n/10 Neben der Ar-chi-tek-tur der RSU Cloud als sol-ches
- []
-
-
-Underfull \hbox (badness 3701) in paragraph at lines 494--500
-\OT1/ptm/m/n/10 die in die-sem Pa-per vor-ge-stellt wer-den soll. Auf-ga-be
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 494--500
-\OT1/ptm/m/n/10 des CRM ist es, gleich-zei-tig den Netz-werk-ver-kehr, der
- []
-
-
-Underfull \hbox (badness 3118) in paragraph at lines 494--500
-\OT1/ptm/m/n/10 das Rou-ting durch das phy-si-ka-li-sche Netz ent-steht zu
- []
-
-
-Underfull \hbox (badness 1895) in paragraph at lines 494--500
-\OT1/ptm/m/n/10 be-schrie-ben wer-den soll. Die Pro-blem-stel-lung l[]asst sich
-
- []
-
-
-Underfull \hbox (badness 5607) in paragraph at lines 494--500
-\OML/cmm/m/it/10 T \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 t[]; t[
-]; :::t[]\OMS/cmsy/m/n/10 g$ \OT1/ptm/m/n/10 mit ei-ner An-fangs-kon-fi-gu-ra-t
-i-on
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--500
-
- []
-
+[3]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 531.
+(amsmath)                trying to recover with `aligned' on input line 537.
 
-[3] <grafik/delay.pdf, id=302, 845.0471pt x 597.51233pt>
+[4] <grafik/delay.pdf, id=305, 845.0471pt x 597.51233pt>
 File: grafik/delay.pdf Graphic file (type pdf)
 
 <use grafik/delay.pdf>
-Package pdftex.def Info: grafik/delay.pdf used on input line 575.
+Package pdftex.def Info: grafik/delay.pdf used on input line 577.
 (pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<grafik/VMMIG.pdf, id=303, 845.0471pt x 597.51233pt>
+ <grafik/VMMIG.pdf, id=306, 845.0471pt x 597.51233pt>
 File: grafik/VMMIG.pdf Graphic file (type pdf)
- <use grafik/VMMIG.pdf>
-Package pdftex.def Info: grafik/VMMIG.pdf used on input line 582.
+
+<use grafik/VMMIG.pdf>
+Package pdftex.def Info: grafik/VMMIG.pdf used on input line 587.
 (pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<grafik/CPM.pdf, id=304, 845.0471pt x 597.51233pt>
+ <grafik/CPM.pdf, id=307, 845.0471pt x 597.51233pt>
 File: grafik/CPM.pdf Graphic file (type pdf)
- <use grafik/CPM.pdf>
-Package pdftex.def Info: grafik/CPM.pdf used on input line 590.
+
+<use grafik/CPM.pdf>
+Package pdftex.def Info: grafik/CPM.pdf used on input line 597.
 (pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<grafik/MDP.pdf, id=305, 845.0471pt x 597.51233pt>
+ <grafik/MDP.pdf, id=308, 845.0471pt x 597.51233pt>
 File: grafik/MDP.pdf Graphic file (type pdf)
- <use grafik/MDP.pdf>
-Package pdftex.def Info: grafik/MDP.pdf used on input line 597.
-(pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <./grafik/delay.pdf> <./grafik/VMMIG.pdf> <./grafik/CPM.pdf> <./grafik/MDP.p
-df>]
+<use grafik/MDP.pdf>
+Package pdftex.def Info: grafik/MDP.pdf used on input line 608.
+(pdftex.def)             Requested size: 211.26126pt x 128.03821pt.
+ [5 <./grafik/delay.pdf> <./grafik/VMMIG.pdf> <./grafik/CPM.pdf> <./grafik/MDP.
+pdf>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -633,17 +668,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
+[6
 
 ] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 3471 strings out of 493108
- 49525 string characters out of 6138446
- 129799 words of memory out of 5000000
- 6888 multiletter control sequences out of 15000+600000
+ 3465 strings out of 493108
+ 49455 string characters out of 6138446
+ 130807 words of memory out of 5000000
+ 6882 multiletter control sequences out of 15000+600000
  34597 words of font info for 65 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,16n,23p,3444b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,24p,3470b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c
 :/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2014/tex
@@ -657,10 +692,10 @@ r7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 -dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (5 pages, 4297739 bytes).
+Output written on bare_conf.pdf (6 pages, 4309645 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
+ 397 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
