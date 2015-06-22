@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  12 JUN 2015 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  22 JUN 2015 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,12 +505,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 451--456
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 451--456
-\OT1/ptm/m/n/10 Was-ser-we-ge und ein gro^^Yes ak-tu-el-les For-schungs-ge-biet
-.
- []
-
-
 Underfull \hbox (badness 4416) in paragraph at lines 451--456
 \OT1/ptm/m/n/10 Durch die da-mit ein-her-ge-hen-de Zu-sam-menf[]uhrung von
  []
@@ -579,19 +573,34 @@ Underfull \hbox (badness 2073) in paragraph at lines 451--456
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 451--456
-\OT1/ptm/m/n/10 Mein ei-ge-ner Bei-trag ist die Zu-sam-men-fas-sung der in
- []
-
-
-Underfull \hbox (badness 4954) in paragraph at lines 451--456
-\OT1/ptm/m/n/10 Res-sour-cen Ma-na-ge-ments. Au-^^Yer-dem wer-de ich die-ses
+Underfull \hbox (badness 2027) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 Pro-blem-stel-lung als mehr-kri-te-ri-el-les ganz-zah-li-ges li
+-nea-res
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 451--456
-\OT1/ptm/m/n/10 The-men-ge-biet durch re-le-van-te Hin-ter-grund-in-for-ma-tio-
-nen
+\OT1/ptm/m/n/10 Der Bei-trag des vor-lie-gen-den Ar-ti-kels ist die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 Zu-sam-men-fas-sung der in [[]] vor-ge-stell-ten Cloud
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 Au-^^Yer-dem wird die-ses The-men-ge-biet durch re-le-van-te
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 Hin-ter-grund-in-for-ma-tio-nen bez[]uglich SDN und durch die
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 wer-den in Ab-schnitt IV erl[]autert. In Ab-schnitt V wird
  []
 
 
@@ -606,98 +615,76 @@ Underfull \hbox (badness 2556) in paragraph at lines 451--456
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 3884) in paragraph at lines 451--456
+\OT1/ptm/m/n/10 ver-gli-chen. Ab-schlie-^^Yend wer-den in Ab-schnitt VII die
+ []
 
- [1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{c:/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 3907) in paragraph at lines 469--471
-\OT1/ptm/m/n/10 in-te-griert sind, ge-nannt Road-si-de Units (RSUs). Die-se
- []
-
-
-Underfull \hbox (badness 6691) in paragraph at lines 469--471
+Underfull \hbox (badness 6691) in paragraph at lines 470--473
 \OT1/ptm/m/n/10 Da ei-ne der-ar-ti-ge Cloud dem-nach al-le nach-ge-frag-ten
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 469--471
-\OT1/ptm/m/n/10 muss, wer-den ho-he An-for-de-run-gen an sie ge-stellt. Ei-ne
- []
-
-
-Underfull \hbox (badness 3460) in paragraph at lines 469--471
-\OT1/ptm/m/n/10 gr[]o^^Ytm[]ogliche Si-cher-heit zu ga-ran-tie-ren und so-mit d
-ie
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
-
  []
 
 <grafik/strasse.pdf, id=10, 455.45157pt x 499.11469pt>
 File: grafik/strasse.pdf Graphic file (type pdf)
 
 <use grafik/strasse.pdf>
-Package pdftex.def Info: grafik/strasse.pdf used on input line 474.
-(pdftex.def)             Requested size: 272.43066pt x 314.39354pt.
+Package pdftex.def Info: grafik/strasse.pdf used on input line 476.
+(pdftex.def)             Requested size: 272.43066pt x 311.08116pt.
 
-Overfull \hbox (19.3808pt too wide) in paragraph at lines 474--475
+Overfull \hbox (19.3808pt too wide) in paragraph at lines 476--477
  [][] 
  []
 
 [2 <./grafik/strasse.pdf>]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 502.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 509.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 502.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 509.
 
 
-Overfull \hbox (3.25227pt too wide) in paragraph at lines 508--508
+Overfull \hbox (3.25227pt too wide) in paragraph at lines 515--515
 [] 
  []
 
 [3]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 540.
+(amsmath)                trying to recover with `aligned' on input line 547.
 
 [4] <grafik/delay.pdf, id=324, 845.0471pt x 597.51233pt>
 File: grafik/delay.pdf Graphic file (type pdf)
 
 <use grafik/delay.pdf>
-Package pdftex.def Info: grafik/delay.pdf used on input line 584.
-(pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
+Package pdftex.def Info: grafik/delay.pdf used on input line 591.
+(pdftex.def)             Requested size: 211.26126pt x 117.36845pt.
  <grafik/VMMIG.pdf, id=325, 845.0471pt x 597.51233pt>
 File: grafik/VMMIG.pdf Graphic file (type pdf)
 
 <use grafik/VMMIG.pdf>
-Package pdftex.def Info: grafik/VMMIG.pdf used on input line 594.
-(pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<grafik/CPM.pdf, id=326, 845.0471pt x 597.51233pt>
+Package pdftex.def Info: grafik/VMMIG.pdf used on input line 600.
+(pdftex.def)             Requested size: 211.26126pt x 117.36845pt.
+ <grafik/CPM.pdf, id=326, 845.0471pt x 597.51233pt>
 File: grafik/CPM.pdf Graphic file (type pdf)
- <use grafik/CPM.pdf>
-Package pdftex.def Info: grafik/CPM.pdf used on input line 604.
+
+<use grafik/CPM.pdf>
+Package pdftex.def Info: grafik/CPM.pdf used on input line 609.
 (pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <grafik/MDP.pdf, id=327, 845.0471pt x 597.51233pt>
 File: grafik/MDP.pdf Graphic file (type pdf)
  <use grafik/MDP.pdf>
-Package pdftex.def Info: grafik/MDP.pdf used on input line 615.
-(pdftex.def)             Requested size: 211.26126pt x 128.03821pt.
+Package pdftex.def Info: grafik/MDP.pdf used on input line 617.
+(pdftex.def)             Requested size: 211.26126pt x 124.48161pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5 <./grafik/delay.pdf> <./grafik/VMMIG.pdf> <./grafik/CPM.pdf> <./grafik/MDP.p
 df>]
@@ -722,7 +709,7 @@ Here is how much of TeX's memory you used:
  6882 multiletter control sequences out of 15000+600000
  34597 words of font info for 65 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,16n,24p,3517b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,24p,1512b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c
 :/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2014/tex
@@ -736,7 +723,7 @@ r7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 -dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 4322788 bytes).
+Output written on bare_conf.pdf (6 pages, 4323092 bytes).
 PDF statistics:
  416 PDF objects out of 1000 (max. 8388607)
  245 compressed objects within 3 object streams
