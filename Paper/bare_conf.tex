@@ -375,7 +375,7 @@ Email: christoph.wittmann@tum.de}
 %Telephone: (800) 555--1212\\
 %Fax: (888) 555--1212}
 
-\thanks{*This paper is a reinterpretation of the paper \emph{Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani. ``Software Defined Networking for RSU Clouds in support of The Internet of Vehicles'' Internet of Things Journal, IEEE, 2014, pp. 133-144}. It was presented on June 22, 2015 (Paper submission deadline) as a part of the Communication Networks Seminar (MsEI course at TUM), under the supervision of M. Sc. 
+\thanks{*This paper is a reinterpretation of the paper \emph{M. Salahuddin, A. Al-Fuqaha, M. Guizani. \glqq Software Defined Networking for RSU Clouds in support of The Internet of Vehicles\grqq , Internet of Things Journal, IEEE, 2014, pp. 133-144}. It was presented on June 22, 2015 (Paper submission deadline) as a part of the Communication Networks Seminar (MsEI course at TUM), under the supervision of M.Sc. 
 Christian Sieber (c.sieber@tum.de).}
 }
 
@@ -473,7 +473,7 @@ Eine solche RSU Cloud besteht dabei neben gewöhnlichen RSUs zudem aus RSU Mikro
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[trim=1.5cm 5 0 0.8cm, scale=0.66]{grafik/strasse.pdf}
+	\includegraphics[trim=1.5cm 6 0 0.8cm, scale=0.66]{grafik/strasse.pdf}
 	\caption{RSU Cloud Architektur}
 	\label{img:grafik-dummy}
 \end{figure}
@@ -585,8 +585,10 @@ Aus dem MDP lässt sich dann eine Strategie zur Auswahl einer Konfiguration able
 \section{Simulationsergebnisse}
 
 In diesem Kapitel werden die Ergebnisse der linearen Optimierung (CRM Optimization) und des heuristischen Ansatzes (CRM Heuristic) erläutert. Um einen aussagekräftigen Vergleich durchzuführen, wird ein weiterer Ansatz (Cost Optimization) zur Lösung des Ressourcen Managements herangezogen. Bei diesem Ansatz handelt es sich um eine naive Herangehensweise, die das Ziel hat, die Dienste so auf eine minimale Anzahl an Hosts im Netzwerk zu verteilen, dass die Nachfrage bedient werden kann. Die Verzögerung, die sich dadurch für die Dienste ergeben, bleiben bei diesem Ansatz völlig unberücksichtigt. Dies geht auch aus Abbildung \ref{img:delay} hervor, in der man sieht, dass lineare Optimierung in Sachen Verzögerung um ein Vielfaches besser abschneidet als der naive Ansatz.  
+Der heuristische Ansatz ist dabei nur geringfügig im Nachteil gegenüber der linearen Optimierung. 
+Auch bei der Anzahl an Verschiebungen von Diensten zeigt sich ein ähnliches Bild.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[trim=0 3cm 0 1.5cm,scale=0.25]{grafik/delay.pdf}
 	\caption{Der heuristische Ansatz bewegt sich sehr nahe an der optimalen Verzögerung
@@ -595,7 +597,7 @@ In diesem Kapitel werden die Ergebnisse der linearen Optimierung (CRM Optimizati
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[trim=0 3cm 0 1.5cm,scale=0.25]{grafik/VMMIG.pdf}
 	\caption{Die Heuristik schneidet besser ab als der naive Ansatz.
@@ -604,7 +606,7 @@ In diesem Kapitel werden die Ergebnisse der linearen Optimierung (CRM Optimizati
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[trim=0 3cm 0 1cm,scale=0.25]{grafik/CPM.pdf}
 	\caption{Die Heuristik verursacht am meisten Overhead in der Kontrollebene.
@@ -612,15 +614,15 @@ In diesem Kapitel werden die Ergebnisse der linearen Optimierung (CRM Optimizati
 	\label{img:CPM}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[trim=0 2.5cm 0 1cm,scale=0.25]{grafik/MDP.pdf}
+	\includegraphics[trim=0 2cm 0 1cm,scale=0.25]{grafik/MDP.pdf}
 	\caption{Der MDP minimiert die Verschiebungen von VMs auf lange Sicht
 	(Diagramm entnommen aus \cite{IEEEhowto:orig})}
 	\label{img:MDP}
 \end{figure}
 
-Der heuristische Ansatz ist dabei nur geringfügig im Nachteil gegenüber der linearen Optimierung. Auch bei der Anzahl an Verschiebungen von Diensten zeigt sich ein ähnliches Bild.
+
 Wie in Abbildung \ref{img:VMMIG} zu sehen ist, sind die lineare Optimierung sowie die Heuristik deutlich besser als der naive Ansatz.
 Was den Overhead in der Kontrollebene angeht, so performt hier die Heuristik am schlechtesten.
 In Abbildung \ref{img:MDP} wird die Heuristik mit der Verbesserung durch den MDP mit der Heuristik ohne diese Verbesserung verglichen. Man sieht, dass die Verbesserung durch den MDP  anfänglich mehr VM Verschiebungen verursacht. Dies erweist sich aber als vorteilhaft, indem es auf lange Sicht insgesamt zu weniger Verschiebungen kommt.
@@ -631,67 +633,38 @@ In Abbildung \ref{img:MDP} wird die Heuristik mit der Verbesserung durch den MDP
 
 In diesem Artikel wurde in Form einer Zusammenfassung eine neuartige RSU Cloud mit zugehörigem Ressourcen Management vorgestellt. Der große Vorteil dieser Architektur ist, dass sie dank SDN flexibel konfigurierbar ist und sich somit dynamisch an die Nachfrage anpassen lässt. Dies spart Kosten für den Dienstanbieter und wirkt sich zudem positiv auf die Latenzzeiten aus, da die Dienste möglichst nah am Konsumenten gehostet werden. Ein weiterer Vorteil ist, dass sich die Architektur leicht neben schon bestehenden, anderen Cloud Architekturen einsetzen lässt.
 Außerdem wurde eine Lösung für das Ressourcen Management in der Cloud gefunden, die gleichzeitig die Verschiebung von VMs, den Overhead in der Kontrollebene, die Anzahl an Hosts im Netz sowie die Verzögerung optimiert.
-Die Ergebnisse einer Simulation machen deutlich, dass die Heuristik einem naiven Ansatz bezüglich der Anzahl an Verschiebungen deutlich überlegen ist. Was die Verzögerung betrifft, so kommt die Heuristik sehr nahe an ein Optimum heran.
-Die Verbesserung der Heuristik durch Bestärkendes Lernen optimiert die Anzahl an Verschiebungen auch auf längere Sicht. 
+Hierzu wurde das Ressourcen Management der Cloud als ein mehrkriterielles ganzzahliges lineares Optimierungsproblem modelliert sowie eine Heuristik entwickelt, um die Problemstellung zu lösen.
+Die Ergebnisse einer Simulation machen deutlich, dass die Heuristik einem naiven Ansatz bezüglich der Anzahl an Verschiebungen deutlich überlegen ist. Was die Verzögerung betrifft, so kommt die Heuristik sehr nahe an das Optimum heran.
+Die Verbesserung der Heuristik durch Bestärkendes Lernen minimiert die Anzahl an Verschiebungen auch auf längere Sicht. 
 
 
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,IEEEexample}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-
-%\newpage
 
 \begin{thebibliography}{1}
 
 \bibitem{IEEEhowto:orig}
-Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani \emph{Software Defined Networking for RSU Clouds in support of The Internet of Vehicles}, IEEE Internet of Things Journal, VOL. X, NO. X, November 2014.
+M. Salahuddin, A. Al-Fuqaha and M. Guizani, \emph{\glqq Software Defined Networking for RSU Clouds in support of The Internet of Vehicles\grqq}, IEEE Internet of Things Journal, VOL. X, NO. X, November 2014.
 
 
 \bibitem{IEEEhowto:sdn}
-Michael Jarschel, Thomas Zinner, Tobias Hoßfeld, Phuoc Tran-Gia, and Wolfgang Kellerer \emph{Interfaces, attributes, and use cases: A compass for SDN}, Communications Magazine, IEEE, 2014.
+M. Jarschel, T. Zinner, T. Hoßfeld, P. Tran-Gia, and W. Kellerer, \emph{\glqq Interfaces, attributes, and use cases: A compass for SDN\grqq}, IEEE Communications Magazine, pp. 210-217 IEEE, June 2014.
 
 
 \bibitem{IEEEhowto:star}
-K. Mershad and H. Artail \emph{Finding a STAR in a Vehicular Cloud}, IEEE
+K. Mershad and H. Artail, \emph{\glqq Finding a STAR in a Vehicular Cloud\grqq}, IEEE
 Intelligent Transportation Systems Magazine, vol. 5, no. 2, pp. 55-68, 2013.
 
 \bibitem{IEEEhowto:rethinking}
-R. Hussain, J. Son, H. Eun, S. Kim and H. Oh \emph{Rethinking Vehicular
-Communications: Merging VANET with cloud computing}, IEEE 4th
+R. Hussain, J. Son, H. Eun, S. Kim and H. Oh, \emph{\glqq Rethinking Vehicular
+Communications: Merging VANET with cloud computing\grqq}, IEEE 4th
 International Conference on Cloud Computing Technology and Science
 (CloudCom), Taipei, 2012.
 
 \bibitem{IEEEhowto:king}
-G. Curry and R. Feldman \emph{Manufacturing Systems Modeling and Analysis}, Springer Heidelberg Dordrecht, 2nd Edition, 2011.
+G. Curry and R. Feldman, \emph{\glqq Manufacturing Systems Modeling and Analysis\grqq}, Springer Heidelberg Dordrecht, 2nd Edition, 2011.
 
 \bibitem{IEEEhowto:sum}
-Mohammad A. Salahuddin, Ala Al-Fuqaha, Mohsen Guizani and Soumaya Cherkaoui \emph{RSU Cloud and its Resource Management in
-support of Enhanced Vehicular Applications}, Globecom 2014 Workshop - Cloud Computing Systems, Networks, and Applications, 2014.
-
-
-
-
-
+M. Salahuddin, A. Al-Fuqaha, M. Guizani and S. Cherkaoui, \emph{\glqq RSU Cloud and its Resource Management in
+support of Enhanced Vehicular Applications\grqq}, Globecom 2014 Workshop - Cloud Computing Systems, Networks, and Applications, 2014.
 
 
 

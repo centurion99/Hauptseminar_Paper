@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  22 JUN 2015 14:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.8.13)  22 JUN 2015 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,7 +632,7 @@ File: grafik/strasse.pdf Graphic file (type pdf)
 
 <use grafik/strasse.pdf>
 Package pdftex.def Info: grafik/strasse.pdf used on input line 476.
-(pdftex.def)             Requested size: 272.43066pt x 311.08116pt.
+(pdftex.def)             Requested size: 272.43066pt x 310.41869pt.
 
 Overfull \hbox (19.3808pt too wide) in paragraph at lines 476--477
  [][] 
@@ -659,35 +659,28 @@ Package amsmath Warning: Cannot use `split' here;
 File: grafik/delay.pdf Graphic file (type pdf)
 
 <use grafik/delay.pdf>
-Package pdftex.def Info: grafik/delay.pdf used on input line 591.
+Package pdftex.def Info: grafik/delay.pdf used on input line 593.
 (pdftex.def)             Requested size: 211.26126pt x 117.36845pt.
  <grafik/VMMIG.pdf, id=325, 845.0471pt x 597.51233pt>
 File: grafik/VMMIG.pdf Graphic file (type pdf)
 
 <use grafik/VMMIG.pdf>
-Package pdftex.def Info: grafik/VMMIG.pdf used on input line 600.
+Package pdftex.def Info: grafik/VMMIG.pdf used on input line 602.
 (pdftex.def)             Requested size: 211.26126pt x 117.36845pt.
  <grafik/CPM.pdf, id=326, 845.0471pt x 597.51233pt>
 File: grafik/CPM.pdf Graphic file (type pdf)
 
 <use grafik/CPM.pdf>
-Package pdftex.def Info: grafik/CPM.pdf used on input line 609.
+Package pdftex.def Info: grafik/CPM.pdf used on input line 611.
 (pdftex.def)             Requested size: 211.26126pt x 120.92503pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<grafik/MDP.pdf, id=327, 845.0471pt x 597.51233pt>
+ <grafik/MDP.pdf, id=327, 845.0471pt x 597.51233pt>
 File: grafik/MDP.pdf Graphic file (type pdf)
- <use grafik/MDP.pdf>
-Package pdftex.def Info: grafik/MDP.pdf used on input line 617.
-(pdftex.def)             Requested size: 211.26126pt x 124.48161pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <./grafik/delay.pdf> <./grafik/VMMIG.pdf> <./grafik/CPM.pdf> <./grafik/MDP.p
-df>]
+<use grafik/MDP.pdf>
+Package pdftex.def Info: grafik/MDP.pdf used on input line 619.
+(pdftex.def)             Requested size: 211.26126pt x 128.03821pt.
+ [5 <./grafik/delay.pdf> <./grafik/VMMIG.pdf> <./grafik/CPM.pdf> <./grafik/MDP.
+pdf>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -723,7 +716,7 @@ r7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 -dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmbi8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb><c:/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (6 pages, 4323092 bytes).
+Output written on bare_conf.pdf (6 pages, 4323357 bytes).
 PDF statistics:
  416 PDF objects out of 1000 (max. 8388607)
  245 compressed objects within 3 object streams
